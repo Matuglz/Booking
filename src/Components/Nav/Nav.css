@@ -39,6 +39,10 @@ text-align: center;
     gap: 10px;
 }
 
+.titulo-ma{
+    margin-left: -10vw;
+}
+
 /* MENU */
 .nav{
     display: flex;
@@ -103,6 +107,10 @@ text-align: center;
     }
 
     .boton-abrir-menu{
+        display: none;
+    }
+    
+    .titulo-ma{
         display: none;
     }
 }

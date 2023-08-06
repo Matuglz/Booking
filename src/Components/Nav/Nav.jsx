@@ -12,12 +12,17 @@ export default function Nav() {
 
     function hideMenu() {
         setMenuVisible(false);
-    }
+    }                    <h2 >Reading</h2>
     return (
         <div >
             <div className='oferta'><p className='texto-oferta'>ENVIO GRATIS A PARTIR DE $20.000</p></div>
             <div className='nav'>
-                <Link className={`logo ${menuVisible === false ? '' : 'd-none'}`} to='/'><img src={logo} alt="logo" /></Link>
+                <Link className={`logo ${menuVisible === false ? '' : 'd-none'}`} to='/'>
+                    <img src={logo} alt="logo" />
+                    </Link>
+                    <Link className={`titulo-ma ${menuVisible === false ? '' : 'd-none'}`} to='/'>
+                    <h2 >Reading</h2>
+                    </Link>
                 <ul className='ul-menu'>
                     <li><Link className='menu-link' to='/Libros/Todos'>Libros |</Link></li>
                     <li><Link className='menu-link' to='/Sucursales'> Sucursales |</Link></li>
