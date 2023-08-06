@@ -8,11 +8,28 @@
     margin: 2rem 0;
 }
 
+
 .tarjeta-oferta {
-    width: 300px;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+.tarjeta-promos,
+.tarjeta-envio {
+    display: none;
+}
+
+@media (min-width:992px) {
+
+    .tarjeta-promos,
+    .tarjeta-envio {
+        display: block;
+    }
+
+    .tarjeta-cuotas{
+        width: 30vw;
+    }
 }

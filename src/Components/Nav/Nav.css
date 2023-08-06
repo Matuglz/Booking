@@ -59,7 +59,7 @@ text-align: center;
 
 
 .logo{
-    width: 12%;
+    width: 20%;
 
 }
 .logo img{
@@ -79,6 +79,10 @@ text-align: center;
 }
 
 @media (min-width:992px){
+    .logo{
+        width: 12vw;
+    }
+
     .ul-menu{
         display: flex;
         justify-content: space-around;

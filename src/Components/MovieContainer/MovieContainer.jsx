@@ -1,25 +1,39 @@
 import React, { useEffect, useState } from 'react'
 import { pedirLibros } from '../../Functions/Functions'
 import MovieDiv from '../MovieDiv/MovieDiv'
+import FiltrosNav from '../FiltrosNav/FiltrosNav'
+import { useParams } from 'react-router-dom'
 
 
 
 export default function MovieContainer() {
-    let [library, setLibrary] = useState([])
+    const categoria = useParams().categoria
+
+    let [books, setBooks] = useState([])
+
 
     useEffect(() => {
         pedirLibros()
-            .then(res => { setLibrary(res.library) })
-    }, [])
+            .then(res => {
+                let librosFiltrados;
 
+                if (categoria !== "Todos") {
+                    librosFiltrados = res.library.filter(item => item.book.genre === categoria)
+                } else {
+                    librosFiltrados = res.library;
+                }
 
-    let books = []
-    library.forEach(e => books.push(e.book))
+                setBooks(librosFiltrados.map(item => item.book));
+            });
+    }, [categoria]);
 
 
     return (
-    
+
         <div>
+            <div>
+                <FiltrosNav />
+            </div>
             <div className='movie-container'>
                 {books.length > 0 &&
                     <MovieDiv books={books} />

@@ -8,6 +8,10 @@
 
 .lista-filtros li{
     padding: .5rem .8rem;
-    background-color: red;
+    background-color: black;
     border-radius: 1rem;
+}
+
+.item-nav-filter{
+    color: white;
 }

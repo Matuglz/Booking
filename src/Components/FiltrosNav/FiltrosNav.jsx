@@ -2,15 +2,15 @@ import React from 'react'
 import './FiltrosNav.css'
 import { Link } from 'react-router-dom'
 
-export default function FiltrosNav() {
+export default function FiltrosNav(){
   return (
     <div className='filtros-container'>
         <ul className='lista-filtros'>
-        <li><Link to='/Libros'>Todos</Link></li>
-            <li><Link to='/Libros/Terror'>Terror</Link></li>
-            <li><Link to='/Libros/Ciencia-Ficcion'>Ciencia ficcion</Link></li>
-            <li><Link to='/Libros/Zombies'>Zombies</Link></li>
-            <li><Link to='/Libros/Fantasia'>Fantasia</Link></li>
+        <li><Link className='item-nav-filter' to='/Libros/Todos'>Todos</Link></li>
+            <li><Link className='item-nav-filter' to='/Libros/Terror'>Terror</Link></li>
+            <li><Link className='item-nav-filter' to='/Libros/Ciencia ficción'>Ficción</Link></li>
+            <li><Link className='item-nav-filter' to='/Libros/Zombies'>Zombies</Link></li>
+            <li><Link className='item-nav-filter' to='/Libros/Fantasía'>Fantasía</Link></li>
         </ul>
     </div>
   )

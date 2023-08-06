@@ -19,7 +19,7 @@ export default function Nav() {
             <div className='nav'>
                 <Link className={`logo ${menuVisible === false ? '' : 'd-none'}`} to='/'><img src={logo} alt="logo" /></Link>
                 <ul className='ul-menu'>
-                    <li><Link className='menu-link' to='/Libros'>Libros |</Link></li>
+                    <li><Link className='menu-link' to='/Libros/Todos'>Libros |</Link></li>
                     <li><Link className='menu-link' to='/Sucursales'> Sucursales |</Link></li>
                     <li><Link className='menu-link' to='/Contacto'> Contacto</Link></li>
                 </ul>
@@ -37,9 +37,9 @@ export default function Nav() {
                         <button onClick={hideMenu}><i className="bi bi-x"></i></button>
                     </div>
                     <hr />
-                    <ul className='burger-list'>
+                    <ul className='burger-list' onClick={hideMenu}>
                         <li><Link to="/"><img className='logo-burger' src={logo} alt="logo" /></Link></li>
-                        <li><Link className='burger-link' to='/Libros'>Libros</Link></li>
+                        <li><Link className='burger-link' to='/Libros/Todos'>Libros</Link></li>
                         <li><Link className='burger-link' to='/Sucursales'> Sucursales</Link></li>
                         <li><Link className='burger-link' to='/Contacto'> Contacto</Link></li>
                         <li><Link className='burger-link burger-i' to='/Account'><i className="bi bi-person-circle"></i><p>Iniciar sesion</p></Link></li>

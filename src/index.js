@@ -17,7 +17,7 @@ root.render(
     <Nav />
     <Routes>
       <Route path='/' element={<Info />} />
-      <Route path='/Libros' element={<MovieContainer />} />
+      <Route path='/Libros/:categoria' element={<MovieContainer />} />
       <Route path='/Libro/:id' element={<BookDetailContainer/>}/>
     </Routes>
     <Footer />
