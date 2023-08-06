@@ -1,0 +1,37 @@
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.container {
+    width: 200px;
+border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    border-top-right-radius:10px ;
+    border-top-left-radius: 10px;
+}
+
+.image {
+    aspect-ratio: 4/5;
+    object-fit: fill;
+    width: 100%;
+    border-radius: 10px;
+}
+
+button{
+    background-color: white;
+    padding: .5rem;
+    border-radius: 2px;
+    border: 1px solid ;
+    margin-bottom: 5px;
+}
+
+button:hover{
+    cursor:pointer;
+}
+

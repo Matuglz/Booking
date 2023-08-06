@@ -1,0 +1,58 @@
+.book-container{
+    align-items: center;
+    padding: 0 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.book-img{
+    width: 25vw;
+    object-fit: fill;
+}
+
+.book-details{
+    height:50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book-details h2{
+    font-size: 5rem;
+}
+
+.book-sinopsis{
+    font-size: 1.5rem;
+    padding: 0 3rem;
+}
+.book-tips{
+    font-size:1.2rem ;
+}
+
+
+.boton-carrito{
+    background-color: white;
+    padding: .5rem;
+    border-radius: 2px;
+    border: 1px solid ;
+    margin-bottom: 5px;
+}
+
+.book-footer{
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.boton-deseo:hover{
+cursor: pointer;
+}
+
+@media (min-width : 992px){
+    .book-container{
+        display: flex;
+        justify-content: space-between;
+    }
+}

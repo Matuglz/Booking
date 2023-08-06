@@ -1,0 +1,104 @@
+*{
+    text-decoration: none;
+    color: black;
+    list-style: none;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.d-none{
+    display: none;
+}
+
+/* MENU HAMBURGUESA */
+.burger-menu{
+    width: 100vw;
+    height: 100vh;
+}
+
+.burger-header{
+    display: flex;
+    justify-content: flex-end;
+}
+.burger-list{
+    display: flex;
+    flex-direction: column;
+text-align: center;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+
+.logo-burger {
+    width: 20vw;
+}
+
+.burger-i{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* MENU */
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.ul-item{
+    display: none;
+}
+.ul-menu{
+    display: none;
+}
+.barrita{
+    display: none;
+}
+
+
+.logo{
+    width: 12%;
+
+}
+.logo img{
+    width: 100%;
+}
+
+.oferta{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+
+.texto-oferta{
+    color: white;
+}
+
+@media (min-width:992px){
+    .ul-menu{
+        display: flex;
+        justify-content: space-around;
+        width: 430px;
+        font-size: 2rem;
+    }
+    
+    .ul-item{
+        display: flex;
+        justify-content: space-around;
+        font-size: x-large;
+        width: 150px;
+        
+    }
+
+    .barrita{
+        display: block;
+    }
+
+    .boton-abrir-menu{
+        display: none;
+    }
+}

@@ -1,0 +1,13 @@
+.lista-filtros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.lista-filtros li{
+    padding: .5rem .8rem;
+    background-color: red;
+    border-radius: 1rem;
+}
