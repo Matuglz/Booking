@@ -12,15 +12,17 @@
 
 .lista-filtros li{
     padding: .5rem .8rem;
-    background-color: black;
+    border: 1px solid;
     border-radius: 1rem;
 }
 
-.item-nav-filter{
-    color: white;
+.lista-filtros li :hover{
+    cursor: pointer;
 }
 
-@media (min-width:768px){
+
+
+@media (min-width:576px){
     .lista-filtros{
         gap: 1rem;
     }

@@ -1,4 +1,4 @@
-*{
+* {
     text-decoration: none;
     color: black;
     list-style: none;
@@ -7,24 +7,25 @@
     padding: 0;
 }
 
-.d-none{
+.d-none {
     display: none;
 }
 
 /* MENU HAMBURGUESA */
-.burger-menu{
+.burger-menu {
     width: 100vw;
     height: 100vh;
 }
 
-.burger-header{
+.burger-header {
     display: flex;
     justify-content: flex-end;
 }
-.burger-list{
+
+.burger-list {
     display: flex;
     flex-direction: column;
-text-align: center;
+    text-align: center;
     gap: 2rem;
     font-size: 1.5rem;
 }
@@ -33,44 +34,47 @@ text-align: center;
     width: 20vw;
 }
 
-.burger-i{
+.burger-i {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.titulo-ma{
+.titulo-ma {
     margin-left: -10vw;
 }
 
 /* MENU */
-.nav{
+.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
 }
 
-.ul-item{
+.ul-item {
     display: none;
 }
-.ul-menu{
+
+.ul-menu {
     display: none;
 }
-.barrita{
+
+.barrita {
     display: none;
 }
 
 
-.logo{
+.logo {
     width: 20%;
 
 }
-.logo img{
+
+.logo img {
     width: 100%;
 }
 
-.oferta{
+.oferta {
     background-color: black;
     display: flex;
     justify-content: center;
@@ -78,39 +82,39 @@ text-align: center;
     height: 30px;
 }
 
-.texto-oferta{
+.texto-oferta {
     color: white;
 }
 
-@media (min-width:992px){
-    .logo{
+@media (min-width:992px) {
+    .logo {
         width: 12vw;
     }
 
-    .ul-menu{
+    .ul-menu {
         display: flex;
         justify-content: space-around;
         width: 430px;
         font-size: 2rem;
     }
-    
-    .ul-item{
+
+    .ul-item {
         display: flex;
         justify-content: space-around;
         font-size: x-large;
         width: 150px;
-        
+
     }
 
-    .barrita{
+    .barrita {
         display: block;
     }
 
-    .boton-abrir-menu{
+    .boton-abrir-menu {
         display: none;
     }
-    
-    .titulo-ma{
+
+    .titulo-ma {
         display: none;
     }
 }
