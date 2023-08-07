@@ -35,8 +35,12 @@ export default function MovieContainer() {
                 <FiltrosNav />
             </div>
             <div className='movie-container'>
-                {books.length > 0 &&
-                    <MovieDiv books={books} />
+                {books.length > 0 && books.map(book => {
+                    return (
+                        <MovieDiv key={book.isbn} book={book} />
+                    )
+                })
+
                 }
             </div>
         </div>

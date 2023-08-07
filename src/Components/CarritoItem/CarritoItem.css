@@ -1,0 +1,82 @@
+
+.car-container{
+    display: flex;
+    margin: 1rem 0;
+}
+
+.car{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(152, 160, 168);
+    padding: 1rem;
+    border-radius: 20px;
+    width: 100vw;
+}
+
+.car img{
+    aspect-ratio: 4/6;
+    width: 10vw;
+}
+
+.car-trash-icon{
+    font-size: 1.5rem;
+    color: red;
+}
+
+.cantidad-contenedor,.contenedor-precio{
+    display: flex;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.contenedor-precio{
+    padding: 1.5rem;
+}
+
+.cantidad-contenedor button{
+    font-size: medium;
+    font-weight: 600;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgb(88, 94, 100);
+
+}
+
+.numero-cantidad{
+    padding-top: 4px;
+    font-size: 1.4rem;
+}
+
+.texto-cantidad,.texto-precio{
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
+}
+
+
+@media (min-width:768px){
+    .car{
+        height: 20vh;
+    }
+
+    .car img{
+        width: 7vw;
+    }
+}
+
+
+.car-trash-icon{
+    border:1px solid rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    padding: .5rem;
+}
+
+.car-trash-icon:hover{
+    cursor: pointer;
+    border:1px solid red;
+    }

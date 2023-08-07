@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import logo from '../img/logo.png'
 import { Link } from 'react-router-dom'
 import './Nav.css'
+import CarritoWidget from '../CarritoWidget/CarritoWidget';
 
 export default function Nav() {
     const [menuVisible, setMenuVisible] = useState(false);
@@ -31,7 +32,7 @@ export default function Nav() {
                 <ul className='ul-item'>
                     <li><Link className='item-link' to='/Account'><i className="bi bi-person-circle"></i></Link></li>
                     <li><Link className='item-link' to='/Lista-de-Espera'><i className="bi bi-bookmark-heart"></i></Link></li>
-                    <li><Link className='item-link' to='/Carrito'><i className="bi bi-bag"></i></Link></li>
+                    <li><CarritoWidget/></li>
                 </ul>
 
 
@@ -49,7 +50,7 @@ export default function Nav() {
                         <li><Link className='burger-link' to='/Contacto'> Contacto</Link></li>
                         <li><Link className='burger-link burger-i' to='/Account'><i className="bi bi-person-circle"></i><p>Iniciar sesion</p></Link></li>
                         <li><Link className='burger-link burger-i' to='/Lista-de-Espera'><i className="bi bi-bookmark-heart"></i><p>Lista de deseos</p></Link></li>
-                        <li><Link className='burger-link burger-i' to='/Carrito'><i className="bi bi-bag"></i><p>Carrito</p></Link></li>
+                        <li><CarritoWidget/></li>
                     </ul>
                 </div>
             </div>

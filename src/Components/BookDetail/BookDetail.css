@@ -18,7 +18,7 @@
 }
 
 .book-details h2{
-    font-size: 5rem;
+    font-size: 2rem;
 }
 
 .book-sinopsis{
@@ -46,8 +46,18 @@
     align-items: center;
 }
 
+.book-price{
+    font-size: 1.5rem;
+}
+
 .boton-deseo:hover{
 cursor: pointer;
+}
+
+@media (min-width:576px){
+    .book-details h2{
+        font-size: 5rem;
+    }
 }
 
 @media (min-width : 992px){

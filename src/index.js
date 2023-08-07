@@ -1,28 +1,17 @@
 import React from 'react';
 import './index.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ReactDOM from 'react-dom/client';
 import '../node_modules/bootstrap-icons/font/bootstrap-icons.css'
-import MovieContainer from './Components/MovieContainer/MovieContainer';
-import Nav from './Components/Nav/Nav';
-import Info from './Components/Info/Info';
-import Footer from './Components/Footer/Footer';
-import BookDetailContainer from './Components/BookDetailContainer/BookDetailContainer';
+import App from './App';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <Nav />
-    <Routes>
-      <Route path='/' element={<Info />} />
-      <Route path='/Libros/:categoria' element={<MovieContainer />} />
-      <Route path='/Libro/:id' element={<BookDetailContainer/>}/>
-    </Routes>
-    <Footer />
-  </BrowserRouter>
 
+<div>
+  <App/>
+</div>
 );
 
 // If you want to start measuring performance in your app, pass a function
