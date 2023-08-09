@@ -1,5 +1,6 @@
 import React,{useEffect, useState} from 'react'
 import { createContext } from "react";
+// import AlertAgregadoAlCarrito from '../Components/AlertAgregadoAlCarrito/AlertAgregadoAlCarrito';
 
 
 export const CarContext = createContext()
@@ -39,8 +40,23 @@ export default function CarProvider({ children }) {
     }, [carrito])
     
 
+
+    let [showAlert, setShowAlert] = useState(true)
+
+    useEffect(() => {
+      if (showAlert) {
+        setTimeout(() => {
+          setShowAlert(false)
+        }, 3000);
+      }
+    }, [showAlert])
+  
+    function mostrarAlerta() {
+      setShowAlert(true)
+    }
+
     return (
-        <CarContext.Provider value={{ carrito, setCarrito, agregarAlCarrito, cantidadEnElCarrito, borrarItem }}>
+        <CarContext.Provider value={{ carrito, setCarrito, agregarAlCarrito, cantidadEnElCarrito, borrarItem,mostrarAlerta,showAlert }}>
             {children}
         </CarContext.Provider>
     )

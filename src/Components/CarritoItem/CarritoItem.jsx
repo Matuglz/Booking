@@ -37,7 +37,6 @@ export default function CarritoItem({ prod }) {
 
                 <img src={prod.cover} alt={prod.title} />
                 <div>
-                    <p className='texto-precio'>Precio</p>
                     <p className='contenedor-precio'>${prod.price * cantidad}</p>
                 </div>
                 <div>

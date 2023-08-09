@@ -9,6 +9,10 @@ import Footer from './Components/Footer/Footer';
 import BookDetailContainer from './Components/BookDetailContainer/BookDetailContainer';
 import CarProvider from './Context/CarContext';
 import Carrito from './Components/Carrito/Carrito';
+import Autenticacion from './Components/Autenticacion/Autenticacion';
+import CheckCorazon from './Components/CheckCorazon/CheckCorazon';
+import ListaDeseosContainer from './Components/ListaDeseosContainer/ListaDeseosContainer';
+
 
 export default function App() {
 
@@ -19,10 +23,13 @@ export default function App() {
                 <BrowserRouter>
                     <Nav />
                     <Routes>
+                        <Route path='/pruebas'element={<CheckCorazon/>}/>
                         <Route path='/' element={<Info />} />
                         <Route path='/Libros/:categoria' element={<MovieContainer />} />
                         <Route path='/Libro/:id' element={<BookDetailContainer />} />
                         <Route path='/Carrito' element={<Carrito/>}/>
+                        <Route path='/Sesion' element={<Autenticacion/>}/>
+                        <Route path='/Lista-de-deseos' element={<ListaDeseosContainer/>}/>
                     </Routes>
                     <Footer />
                 </BrowserRouter>

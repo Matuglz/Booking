@@ -6,18 +6,18 @@ import BookDetail from '../BookDetail/BookDetail'
 
 export default function BookDetailContainer() {
 
-    const [item, setItem] = useState(null)
+    const [book, setBook] = useState(null)
     const id = useParams().id
 
     useEffect(() => {
         pedirItemPorIsbn(id)
-            .then((res) => setItem(res))
+            .then((res) => setBook(res))
             
     }, [id])
 
   return (
     <div>
-        {item && <BookDetail item={item}/>}
+        {book && <BookDetail book={book}/>}
     </div>
   )
 }
