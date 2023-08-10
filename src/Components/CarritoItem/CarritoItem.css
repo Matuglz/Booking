@@ -1,112 +1,56 @@
-
-.car-container{
+.card {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
     margin: 1rem 0;
 }
 
-.car{
+.card-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-card {
+    aspect-ratio: 5/5;
+    width: 100px;
+    object-fit: contain;
+}
+
+.precioytitulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+
+.cantidad-contenedor {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    text-align: center;
-    background-color: rgb(152, 160, 168);
-    padding: 1rem;
-    border-radius: 20px;
-    width: 100vw;
+    width: 50px;
+    border: 1px solid rgb(65, 51, 51);
 }
 
-.car img{
-    aspect-ratio: 4/6;
-    width: 15vw;
+.cantidad-contenedor div{
+    font-weight: 700;
+}
+
+.cantidad-contenedor div:hover{
+    cursor: pointer;
+    color: blue;
 }
 
 .car-trash-icon{
-    font-size: 1.5rem;
     color: red;
-}
-
-.cantidad-contenedor{
-    display: flex;
-    text-align: center;
-    gap: 1rem;
-    padding: .2rem;
-    /* border: 1px solid black; */
-    border-radius: 10px;
-}
-
-.contenedor-precio{
-    text-align: center;
-    padding: .5rem;
-    border: 1px solid black;
-    border-radius: 10px;
-}
-
-.cantidad-contenedor button{
-    display: flex;
-    align-items: center;
-    font-size: medium;
-    font-weight: 600;
-    width: 25px;
-    height: 25px;
-    background-color: rgb(88, 94, 100);
-
-}
-
-.cantidad-contenedor button:hover{
-    background-color: rgb(107, 107, 107);
-}
-
-.numero-cantidad{
-    padding-top: 2px;
-    font-size: 1.4rem;
-}
-
-.texto-cantidad{
-    font-size: 1.4rem;
-    margin-bottom: .5rem;
-}
-
-
-
-@media (min-width:576px){
-    .contenedor-precio{
-        font-size: 1.5rem;
-    }
-}
-
-@media (min-width:768px){
-    .car{
-        height: 20vh;
-    }
-
-    .car img{
-        width: 7vw;
-    }
-
-    .cantidad-contenedor button{
-        width:35px;
-        height: 35px;
-    }
-    .texto-cantidad{
-        font-size: 2rem;
-    }
-}
-
-@media (min-width:992px) {
-
-    .car-trash-icon{
-        font-size: 2rem;
-    }
-    
-}
-
-.car-trash-icon{
-    border:1px solid rgba(255, 255, 255, 0);
-    border-radius: 10px;
-    padding: .5rem;
 }
 
 .car-trash-icon:hover{
     cursor: pointer;
-    border:1px solid red;
-    }
+}
+
+.opciones{
+    display: flex;
+    justify-content: space-between;
+    width: 40px;
+}

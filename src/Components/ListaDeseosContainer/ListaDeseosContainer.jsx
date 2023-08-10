@@ -10,8 +10,6 @@ export default function ListaDeseosContainer() {
 
     const [listaDeseos, setListaDeseos] = useState(listaDeseosLS)
 
-    // const listaDeseos = JSON.parse(localStorage.getItem("deseados")) || []
-
 
     return (
         <div>

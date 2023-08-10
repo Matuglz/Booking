@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './CheckCorazon.css'
+import AlertAgregadoADeseo from '../AlertAgregadoADeseo/AlertAgregadoADeseo'
 
 
-export default function CheckCorazon({book}) {
+export default function CheckCorazon({ book }) {
 
 
     const librosDeseados = JSON.parse(localStorage.getItem("deseados")) || []
@@ -12,18 +13,29 @@ export default function CheckCorazon({book}) {
     const isBookInList = listaDeseo.some(item => item.isbn === book.isbn)
 
     const [isChecked, setIsChecked] = useState(isBookInList);
-    
 
+    //ALERTA DE DESEO
+    let [showAlertDeseo, setShowAlertDeseo] = useState(false)
 
-    function agregarLibroDeseo(book){
-        if (isChecked === false){
-            let libro = {...book}
-        let newLista = [...listaDeseo, libro]
-        setListaDeseo(newLista)
-        localStorage.setItem("deseados", JSON.stringify(newLista))
-        setIsChecked(true)
+    function mostrarAlertaDeseo() {
+        if (isChecked === false) {
+            setShowAlertDeseo(true)
+            setTimeout(() => {
+                setShowAlertDeseo(false)
+            }, 2000);
         }
-        else{
+    }
+
+
+    function agregarLibroDeseo(book) {
+        if (isChecked === false) {
+            let libro = { ...book }
+            let newLista = [...listaDeseo, libro]
+            setListaDeseo(newLista)
+            localStorage.setItem("deseados", JSON.stringify(newLista))
+            setIsChecked(true)
+        }
+        else {
             let libro = book.isbn
             let newLista = [...listaDeseo]
             let libroBorrado = newLista.filter(book => book.isbn !== libro)
@@ -32,18 +44,18 @@ export default function CheckCorazon({book}) {
             setIsChecked(false)
         }
     }
-//--------------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------------------
 
 
-useEffect(() => {
-    setIsChecked(isBookInList)
-}, [isBookInList])
+    useEffect(() => {
+        setIsChecked(isBookInList)
+    }, [isBookInList])
 
     return (
         <div className='arroz'>
-            <input id='heart' type="checkbox" defaultChecked={isChecked} onClick={()=>{agregarLibroDeseo(book)}} />
+            <input id='heart' type="checkbox" defaultChecked={isChecked} onClick={() => { agregarLibroDeseo(book); mostrarAlertaDeseo() }} />
             <label for="heart">❤</label>
-
+            {showAlertDeseo && <AlertAgregadoADeseo />}
         </div>
     )
 }

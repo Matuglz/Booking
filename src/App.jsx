@@ -10,8 +10,8 @@ import BookDetailContainer from './Components/BookDetailContainer/BookDetailCont
 import CarProvider from './Context/CarContext';
 import Carrito from './Components/Carrito/Carrito';
 import Autenticacion from './Components/Autenticacion/Autenticacion';
-import CheckCorazon from './Components/CheckCorazon/CheckCorazon';
 import ListaDeseosContainer from './Components/ListaDeseosContainer/ListaDeseosContainer';
+import AlertAgregadoADeseo from './Components/AlertAgregadoADeseo/AlertAgregadoADeseo';
 
 
 export default function App() {
@@ -23,7 +23,7 @@ export default function App() {
                 <BrowserRouter>
                     <Nav />
                     <Routes>
-                        <Route path='/pruebas'element={<CheckCorazon/>}/>
+                        <Route path='/pruebas'element={<AlertAgregadoADeseo/>}/>
                         <Route path='/' element={<Info />} />
                         <Route path='/Libros/:categoria' element={<MovieContainer />} />
                         <Route path='/Libro/:id' element={<BookDetailContainer />} />

@@ -6,7 +6,7 @@ import CheckCorazon from '../CheckCorazon/CheckCorazon'
 
 
 export default function BookDetail({ book }) {
-
+  // ALERTA DE CARRITO
   let [showAlert, setShowAlert] = useState(false)
 
   useEffect(() => {
@@ -20,6 +20,8 @@ export default function BookDetail({ book }) {
   function mostrarAlerta() {
     setShowAlert(true)
   }
+
+  //AGREGAR AL CARRITO
 
   const { agregarAlCarrito } = useContext(CarContext)
 
@@ -37,9 +39,8 @@ export default function BookDetail({ book }) {
         </p>
         <div className='book-footer'>
           <p className='book-price'>Precio: ${book.price}</p>
-          <button className='boton-carrito' onClick={() => { agregarAlCarrito(book, cantidad); mostrarAlerta() }}>añadir al carrito</button>
-          <CheckCorazon book={book}/>
-
+          <button className='boton-carrito' onClick={() => { agregarAlCarrito(book, cantidad); mostrarAlerta()}}>añadir al carrito</button>
+          <CheckCorazon book={book} />
         </div>
       </div>
       {showAlert && <AlertAgregadoAlCarrito book={book} />}
