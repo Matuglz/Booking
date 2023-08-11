@@ -1,0 +1,13 @@
+.titulo-compra-finalizada{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.datos-compra{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}

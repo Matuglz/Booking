@@ -11,29 +11,30 @@ import CarProvider from './Context/CarContext';
 import Carrito from './Components/Carrito/Carrito';
 import Autenticacion from './Components/Autenticacion/Autenticacion';
 import ListaDeseosContainer from './Components/ListaDeseosContainer/ListaDeseosContainer';
-import AlertAgregadoADeseo from './Components/AlertAgregadoADeseo/AlertAgregadoADeseo';
-
+import Checkout from './Components/Checkout/Checkout';
+import CompraTerminada from './Components/CompraTerminada/CompraTerminada';
 
 export default function App() {
 
     return (
-        <div>
+        <div className='body'>
 
             <CarProvider>
                 <BrowserRouter>
                     <Nav />
                     <Routes>
-                        <Route path='/pruebas'element={<AlertAgregadoADeseo/>}/>
                         <Route path='/' element={<Info />} />
                         <Route path='/Libros/:categoria' element={<MovieContainer />} />
                         <Route path='/Libro/:id' element={<BookDetailContainer />} />
-                        <Route path='/Carrito' element={<Carrito/>}/>
-                        <Route path='/Sesion' element={<Autenticacion/>}/>
-                        <Route path='/Lista-de-deseos' element={<ListaDeseosContainer/>}/>
+                        <Route path='/Carrito' element={<Carrito />} />
+                        <Route path='/Sesion' element={<Autenticacion />} />
+                        <Route path='/Lista-de-deseos' element={<ListaDeseosContainer />} />
+                        <Route path='/Checkout' element={<Checkout />} />
+                        <Route path='/Compra-finalizada' element={<CompraTerminada />} />
                     </Routes>
                     <Footer />
                 </BrowserRouter>
-                </CarProvider>
+            </CarProvider>
         </div>
     )
 }

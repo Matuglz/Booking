@@ -1,6 +1,5 @@
 import React,{useEffect, useState} from 'react'
 import { createContext } from "react";
-// import AlertAgregadoAlCarrito from '../Components/AlertAgregadoAlCarrito/AlertAgregadoAlCarrito';
 
 
 export const CarContext = createContext()
@@ -8,6 +7,8 @@ export const CarContext = createContext()
 const carritoInicial  = JSON.parse(localStorage.getItem("carrito")) || []
 
 export default function CarProvider({ children }) {
+
+    const [login,setLogin] = useState(false)
 
     const [carrito, setCarrito] = useState(carritoInicial)
 
@@ -56,7 +57,7 @@ export default function CarProvider({ children }) {
     }
 
     return (
-        <CarContext.Provider value={{ carrito, setCarrito, agregarAlCarrito, cantidadEnElCarrito, borrarItem,mostrarAlerta,showAlert }}>
+        <CarContext.Provider value={{login,setLogin, carrito, setCarrito, agregarAlCarrito, cantidadEnElCarrito, borrarItem,mostrarAlerta,showAlert }}>
             {children}
         </CarContext.Provider>
     )

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import './CarritoItem.css'
 import { CarContext } from '../../Context/CarContext'
-import CheckCorazon from '../CheckCorazon/CheckCorazon'
+
 
 export default function CarritoItem({ prod }) {
 
@@ -49,9 +49,7 @@ export default function CarritoItem({ prod }) {
                 </div>
                 </div>
                 <div className='opciones'>
-                <CheckCorazon book={prod} />
                     <i  onClick={() => { borrarItem(prod.isbn) }} className="bi bi-trash3 car-trash-icon"></i>
-                    
                 </div>
             </article>
     )

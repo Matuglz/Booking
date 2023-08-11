@@ -7,6 +7,10 @@
     padding: 0;
 }
 
+.ag-hover:hover{
+    cursor: pointer;
+}
+
 .d-none {
     display: none;
 }

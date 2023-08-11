@@ -1,0 +1,25 @@
+.alert-sesion1 {
+    min-height: 50px;
+    width: 300px;
+    max-width: 90%;
+    border-radius: 12px;
+    padding: 6px 22px 6px 20px;
+    display: flex;
+    align-items: center;
+    background-color: #141314;
+    box-sizing: border-box;
+    font-weight: 600;
+  
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 5vh;
+    margin-right: 10px;
+  }
+  
+  .a-sesion1 {
+      font-size: 1rem;
+      color: white;
+  }
+  
+  

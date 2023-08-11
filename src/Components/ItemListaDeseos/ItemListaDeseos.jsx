@@ -33,7 +33,7 @@ export default function ItemListaDeseos({ book,listaDeseos,setListaDeseos }) {
   return (
     <div className='item-deseo-container'>
         <img className='foto' src={book.cover} alt={book.title} />
-        <i onClick={()=>{agregarAlCarrito(book,cantidad);eliminarDeListaDeseos(book);mostrarAlerta()}} className="bi bi-cart2 carrito-deseo"></i>
+        <p onClick={()=>{agregarAlCarrito(book,cantidad);eliminarDeListaDeseos(book);mostrarAlerta()}} className="carrito-deseo">Agregar al carrito</p>
         {showAlert && <AlertAgregadoAlCarrito book={book}/>}
     </div>
   )
