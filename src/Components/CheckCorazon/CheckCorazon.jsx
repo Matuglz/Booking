@@ -54,7 +54,7 @@ export default function CheckCorazon({ book }) {
     return (
         <div className='arroz'>
             <input id='heart' type="checkbox" defaultChecked={isChecked} onClick={() => { agregarLibroDeseo(book); mostrarAlertaDeseo() }} />
-            <label for="heart">❤</label>
+            <label className="bi bi-suit-heart-fill heart" for="heart"></label>
             {showAlertDeseo && <AlertAgregadoADeseo />}
         </div>
     )

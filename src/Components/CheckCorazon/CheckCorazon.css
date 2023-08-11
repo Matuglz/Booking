@@ -1,4 +1,10 @@
+  .heart{
+    color: #aab8c2;
+  }
 
+  .heart:checked{
+    color: #e2264d;
+  }
   
   [id="heart"] {
     position: absolute;
@@ -6,7 +12,7 @@
     width: 100%;
   }
   
-  [for="heart"] {
+  [for="heart"]{
     color: #aab8c2;
     cursor: pointer;
     align-self: center;  
